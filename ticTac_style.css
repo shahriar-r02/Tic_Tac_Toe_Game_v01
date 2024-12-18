@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #2D2A32;
+    color: #F8F0FB;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #F8F0FB;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    background-color: #3E3843;
+    border-radius: 1.5rem;
+    padding: 1vmin;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    font-size: 8vmin;
+    color: #F8F0FB;
+    background-color: #6C5B7B;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.box:hover {
+    background-color: #9B6FAF;
+    transform: scale(1.1);
+}
+
+.box:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    background-color: #4A4150;
+}
+
+.box.highlight {
+    background-color: #C06C84;
+    color: #2D2A32;
+    font-weight: bold;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(192, 108, 132, 0.5);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(192, 108, 132, 1);
+    }
+}
+
+#reset-btn, #new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: #F67280;
+    color: #2D2A32;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+#reset-btn:hover, #new-btn:hover {
+    background-color: #FFAAA7;
+    transform: scale(1.1);
+}
+
+#msg {
+    font-size: 2rem;
+    color: #F67280;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.msg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 20vmin;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background-color: #4A4150;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.hide {
+    display: none;
+}
